@@ -58,7 +58,14 @@ html {
     
 }
 
-ul{
+/* NAVBAR */
+
+nav{
+    background-color: yellowgreen;
+    position: relative;
+}
+
+.ul{
     background-color: greenyellow;
     /* padding: 10px; */
     list-style: none;
@@ -74,10 +81,7 @@ li{
 }
 
 li:hover {
-    /* font-weight: bolder;
-    text-shadow: 2px 4px 4px black; */
     background-color:whitesmoke ;
-
 }
 
 /* nav a{
@@ -92,6 +96,8 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: yellowgreen;
+    width: 100%;
 }
 
 nav a {
@@ -367,4 +373,29 @@ nav a {
     padding: 10px;
     border-radius: 5px;
     border: none;
+}
+
+.toggle-button{
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .toggle-button{
+        display: flex;
+    }
+    
+    .ul{
+        display: none;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ul.show{
+        display: flex;
+        transition: all 0.5 ease-in-out;
+    }    
+
 }
